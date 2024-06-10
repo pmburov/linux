@@ -1,0 +1,8 @@
+echo "Installing git..."
+sudo apt-get update > /dev/null
+sudo apt-get install -y git > /dev/null
+
+echo "Cloning configs"
+git clone https://github.com/pmburov/linux ~/.linux
+
+source ~/.linux/install.sh
