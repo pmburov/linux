@@ -1,0 +1,239 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "yinfei.luahelper"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+  },
+  "breadcrumbs.enabled": false,
+  "cSpell.customDictionaries": {
+    "custom-dictionary-user": {
+      "addWords": true,
+      "name": "custom-dictionary-user",
+      "path": "~/.cspell/custom-dictionary-user.txt",
+      "scope": "user"
+    }
+  },
+  "cSpell.enabledLanguageIds": [
+    "css",
+    "git-commit",
+    "go",
+    "graphql",
+    "handlebars",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "python",
+    "restructuredtext",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "yaml",
+    "yml",
+    "astro"
+  ],
+  "cSpell.enableFiletypes": ["astro", "mdx"],
+  "cSpell.language": "en,ru",
+  "cSpell.showAutocompleteSuggestions": true,
+  "cSpell.userWords": ["docsify", "gurukami"],
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.accessibilitySupport": "off",
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingDelete": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "Dank Mono, Operator Mono, Fira Code , Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 15,
+  "editor.fontWeight": "600",
+  "editor.formatOnSave": true,
+  "editor.lineHeight": 26,
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderWhitespace": "none",
+  "editor.tabSize": 2,
+  "editor.tokenColorCustomizations": {
+    "comments": "#2ea542"
+    // "textMateRules": []
+  },
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.wordWrap": "on",
+  "emmet.includeLanguages": {
+    "astro": "html",
+    "css": "css",
+    "html": "html",
+    "javascript": "javascriptreact",
+    "php": "html",
+    "tpl": "html",
+    "vue": "html"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "markdown"
+  ],
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  // "[json]": {
+  //   "editor.defaultFormatter": "vscode.json-language-features"
+  // },
+  "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.master": "html",
+    "*.tpl": "html"
+  },
+  "files.autoSave": "off",
+  "files.eol": "\n",
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "**/node_modules": true,
+    "node_modules": true,
+    "**/node_modules/*/**": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/.cache": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "**/node_modules": true,
+    "**/node_modules/*/**": true
+  },
+  "git.inputValidation": true,
+  "html.format.preserveNewLines": false,
+  "html.validate.scripts": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "material-icon-theme.folders.associations": {
+    "server": "node"
+  },
+  "npm-outdated.identifySecurityAdvisories": false,
+  "npm-outdated.majorUpdateProtection": false,
+  "prettier.semi": false,
+  "prettier.trailingComma": "none",
+  "search.exclude": {
+    "**/bower_components": true,
+    "**/cache/**": true,
+    "**/node_modules": true,
+    "**/node_modules/**": true,
+    "/.DS_Store": true,
+    "/node_modules": true,
+    "/node_modules/": true
+  },
+  "settingsSync.ignoredExtensions": [],
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.experimental.classRegex": [
+    [".*?Class\\+?=\"(.*?)\""],
+    [".*?Class \\+?= \"(.*?)\""],
+    [".*?Class\\+?: \"(.*?)\""],
+    [".*?Class\\+?=\\{`(.*?)`\\}"]
+  ],
+  "tailwindCSS.includeLanguages": {
+    "javascript": "html",
+    "vue": "html"
+  },
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.env.osx": {},
+  "terminal.integrated.env.windows": {},
+  "terminal.integrated.fontFamily": "MesloLGS NF, Source Code Pro for Powerline",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.lineHeight": 1,
+  "terminal.integrated.tabs.enabled": false,
+  "todo-tree.highlights.enabled": false,
+  "typescript.suggestionActions.enabled": false,
+  "typescript.surveys.enabled": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vue.codeLens.enabled": false,
+  "window.commandCenter": false,
+  "window.customTitleBarVisibility": "auto",
+  "window.openFilesInNewWindow": "off",
+  "window.openFoldersInNewWindow": "on",
+  "window.restoreWindows": "all",
+  "window.title": "${activeEditorMedium}${dirty}${separator}${rootName}${separator}${profileName}",
+  "window.titleBarStyle": "custom",
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#ff69b463",
+    "editor.selectionHighlightBackground": "#135564",
+    "gitDecoration.ignoredResourceForeground": "#ffffff",
+    "selection.background": "#ff69b463"
+  },
+  "workbench.colorTheme": "Material Theme Ocean High Contrast",
+  "workbench.editor.editorActionsLocation": "titleBar",
+  "workbench.editor.labelFormat": "short",
+  // "workbench.tree.indent": 12
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": false,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "template-string-converter.validLanguages": [
+    "svelte",
+    "typescript",
+    "javascript",
+    "typescriptreact",
+    "javascriptreact",
+    "vue"
+  ],
+  "template-string-converter.autoRemoveTemplateString": true,
+  "editor.stickyScroll.enabled": false,
+  "editor.guides.indentation": false,
+  "editor.glyphMargin": true,
+  "workbench.activityBar.location": "top",
+  "workbench.sideBar.location": "right",
+  "prisma.showPrismaDataPlatformNotification": false
+}

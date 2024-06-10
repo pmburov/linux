@@ -1,0 +1,133 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "alt+cmd+/",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+a",
+    "command": "-editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+k cmd+l",
+    "command": "editor.action.transformToLowercase"
+  },
+  {
+    "key": "cmd+k cmd+u",
+    "command": "editor.action.transformToUppercase"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "editor.emmet.action.wrapWithAbbreviation"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "editor.emmet.action.wrapIndividualLinesWithAbbreviation"
+  },
+  {
+    "key": "cmd+l",
+    "command": "console.log.wrap.down.prefix",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+w ctrl+alt+down",
+    "command": "-console.log.wrap.down.prefix",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+cmd+l",
+    "command": "expandLineSelection",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+l",
+    "command": "-expandLineSelection",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+cmd+a",
+    "command": "-notification.acceptPrimaryAction",
+    "when": "notificationFocus"
+  },
+  {
+    "key": "ctrl+cmd+a",
+    "command": "editor.emmet.action.balanceOut"
+  },
+  {
+    "key": "shift+cmd+a",
+    "command": "bracket-select.select",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+a",
+    "command": "-bracket-select.select",
+    "when": "editorTextFocus"
+  },
+  // FILE TREE
+  {
+    "key": "n",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "renameFile",
+    "key": "r",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "command": "deleteFile",
+    "key": "d",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+PageUp",
+    "command": "editorScroll",
+    "args": {
+      "to": "up",
+      "by": "line",
+      "revealCursor": false,
+      "value": 30
+    }
+  },
+  {
+    "key": "ctrl+PageDown",
+    "command": "editorScroll",
+    "args": {
+      "to": "down",
+      "by": "line",
+      "revealCursor": false,
+      "value": 30
+    }
+  },
+  {
+    "key": "cmd+e",
+    "command": "-thunder-client.change-env",
+    "when": "activeWebviewPanelId == 'tc.env-view' || activeWebviewPanelId == 'tc.request-view' || activeWebviewPanelId == 'tc.runcol-view'"
+  },
+  {
+    "key": "cmd+e",
+    "command": "-editor.action.toggleScreenReaderAccessibilityMode",
+    "when": "accessibilityHelpIsShown"
+  },
+  {
+    "key": "cmd+e",
+    "command": "-actions.findWithSelection"
+  },
+  {
+    "key": "cmd+e",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus"
+  },
+  {
+    "key": "f12",
+    "command": "-editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus"
+  }
+]

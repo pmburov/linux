@@ -1,0 +1,67 @@
+{
+	 // Place your snippets for PHP here. Each snippet is defined under a snippet name and has a prefix, body and 
+	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	 // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	 // same ids are connected.
+	 // Example:
+	 "echo print_r pre": {
+		"prefix": "echopre",
+		"body": [
+			"echo '<pre>'.print_r(${1}, true).'</pre>';"
+		],
+		"description": "echo print_r pre"
+	},
+	 "echo print_r": {
+		"prefix": "echocom",
+		"body": [
+			"echo '<!--'.print_r(${1},true).'-->';"
+		],
+		"description": "echo print_r"
+	},
+	 "ACF If get_field": {
+		"prefix": "ifgf",
+		"body": [
+			"\\$${1:field_name} = get_field('${1}', ${2:get_the_ID()});",
+			"if(\\$${1}) {",
+			"	print_r(\\$${1});",
+			"}"
+		],
+		"description": "ACF If get_field"
+	},
+	"ACF If get_field echo": {
+		"prefix": "ifgfe",
+		"body": [
+			"\\$${1:field_name} = get_field('${1}', ${2:get_the_ID()});",
+			"if(\\$${1}) echo \\$${1};"
+		],
+		"description": "ACF If get_field"
+	},
+	"WordPress Loop": {
+		"prefix": "loop",
+		"body": [
+			"\\$args = array(",
+			"'posts_per_page'   => 12,",
+			"// 'category'         => $category,",
+			"'post_type'        => 'product',",
+			"'post_status'      => 'publish'",
+			"//'tax_query' => array(",
+			"//		array(",
+			"//			'taxonomy' => 'people',",
+			"//			'field'    => 'slug',",
+			"//			'terms'    => 'bob',",
+			"//		),",
+			"//	)",
+			");",
+			"",
+			"\\$loop = new WP_Query( \\$args );",
+			"",
+			"if ( \\$loop->have_posts() ) : while ( \\$loop->have_posts() ) : \\$loop->the_post();",
+			"",
+				"endwhile;",
+			"endif;",
+			"",
+			"wp_reset_query();",
+		],
+		"description": "WordPress Loop"
+	}
+}

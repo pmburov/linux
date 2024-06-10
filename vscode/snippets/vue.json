@@ -1,0 +1,40 @@
+{
+	"vts": {
+		"prefix": "vts",
+		"body": [
+			"<template>",
+			"",
+			"</template>",
+			"",
+			"<script setup>",
+			"",
+			"</script>"
+		],
+		"description": "blank template script component"
+	},
+	"vprops": {
+		"prefix": "vprops",
+		"body": [
+			"const props = defineProps($0)"
+		],
+		"description": "props"
+	},
+	"vemit": {
+		"prefix": "vemit",
+		"body": [
+			"const emit = defineEmits([$0])"
+		],
+		"description": "emits"
+	},
+	"vpropsts": {
+		"prefix": "vpropsts",
+		"body": [
+			"type tProps = {",
+			"  class?: string",
+			"}",
+			"",
+			"const { class: className } = defineProps<tProps>()"
+		],
+		"description": "props with types"
+	}
+}
