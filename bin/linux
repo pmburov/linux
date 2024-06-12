@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./ascii.sh
+source ~/.linux/bin/ascii.sh
 echo ''
 
 if [ $# -eq 0 ]; then
