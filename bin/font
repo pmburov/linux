@@ -1,0 +1,16 @@
+# Pick a preconfigured font
+FONT=$(gum choose "Cascadia Mono" "Fira Mono" "JetBrains Mono" "Meslo" --header "Choose your programming font:" --height 6 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
+
+[ ! -n "$FONT" ] && exit 0
+
+if [ "$FONT" == "cascadia-mono" ]; then
+	NERD_FONT="CaskaydiaMono Nerd Font"
+elif [ "$FONT" == "fira-mono" ]; then
+	NERD_FONT="FiraMono Nerd Font"
+elif [ "$FONT" == "jetbrains-mono" ]; then
+	NERD_FONT="JetBrainsMono NFM"
+elif [ "$FONT" == "meslo" ]; then
+	NERD_FONT="MesloLGLDZ Nerd Font"
+fi
+
+gsettings set org.gnome.desktop.interface monospace-font-name "$NERD_FONT 10"
