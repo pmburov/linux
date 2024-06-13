@@ -12,3 +12,6 @@ gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
 
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:'
+
+dconf write /org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-left-0/action 'lock-screen'
+dconf write /org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-right-0/action 'toggle-overview'

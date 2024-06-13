@@ -5,6 +5,7 @@ sudo apt install -y gnome-shell-extension-manager pipx
 pipx install gnome-extensions-cli --system-site-packages
 
 gext install blur-my-shell@aunetx
+gext install custom-hot-corners-extended@G-dH.github.com
 
 # array=( https://extensions.gnome.org/extension/3960/transparent-top-bar-adjustable-transparency/
 # https://extensions.gnome.org/extension/3193/blur-my-shell/ )
@@ -27,4 +28,5 @@ gext install blur-my-shell@aunetx
 # done
 
 sudo cp ~/.local/share/gnome-shell/extensions/blur-my-shell\@aunetx/schemas/org.gnome.shell.extensions.blur-my-shell.gschema.xml /usr/share/glib-2.0/schemas/
+sudo cp ~/.local/share/gnome-shell/extensions/custom-hot-corners-extended\@G-dH.github.com/schemas/org.gnome.shell.extensions.custom-hot-corners-extended.gschema.xml /usr/share/glib-2.0/schemas/
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
