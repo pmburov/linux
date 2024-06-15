@@ -1,2 +1,2 @@
 # --- Telegram ---
-flatpak install flathub org.telegram.desktop
+flatpak install -y flathub org.telegram.desktop
