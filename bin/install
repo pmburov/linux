@@ -1,0 +1,8 @@
+ITEM=$(gum choose "Samba" --header "Select service or app:" --height 6 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
+
+[ ! -n "$ITEM" ] && exit 0
+
+if [ "$ITEM" == "samba" ]; then
+  source ~/.linux/configs/samba.sh
+fi
+
