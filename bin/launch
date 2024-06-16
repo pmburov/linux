@@ -1,7 +1,7 @@
 if [ "$(docker container inspect -f '{{.State.Status}}' 'penpot-penpot-frontend-1' )" = "running" ]; then
-  PENPOT_MENU="PenPot Stop"
+  PENPOT_MENU="Penpot Stop"
 else
-  PENPOT_MENU="PenPot Start"
+  PENPOT_MENU="Penpot Start"
 fi
 
 ITEM=$(gum choose "$PENPOT_MENU"  --header "Select service or app:" --height 6 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
@@ -10,7 +10,7 @@ ITEM=$(gum choose "$PENPOT_MENU"  --header "Select service or app:" --height 6 |
 
 if [ "$ITEM" == "penpot-start" ]; then
   if [ ! -f ~/.penpot/docker-compose.yaml ]; then
-      echo "PenPot docker config no installed"
+      echo "Penpot docker config no installed"
       source ~/.linux/apps/optional/penpot/penpot.sh
   fi
   source ~/.linux/apps/optional/penpot/launch.sh
