@@ -1,3 +1,5 @@
+mkdir ~/.emby/config
+cat <<EOF >~/.emby/docker-compose.yaml
 version: "2.3"
 services:
   emby:
@@ -10,10 +12,10 @@ services:
       - GID=100 # The GID to run emby as (default 2)
       - GIDLIST=100 # A comma-separated list of additional GIDs to run emby as (default: 2)
     volumes:
-      - /home/pavel/.emby/config:/config # Configuration directory
+      - /home/$USER/.emby/config:/config # Configuration directory
       # - /path/to/tvshows:/mnt/share1 # Media directory
       # - /path/to/movies:/mnt/share2 # Media directory
-      - /home/pavel/Music:/mnt/music # Media directory
+      - /home/$USER/Music:/mnt/music # Media directory
     ports:
       - 8096:8096 # HTTP port
       - 8920:8920 # HTTPS port
@@ -21,3 +23,5 @@ services:
       - /dev/dri:/dev/dri # VAAPI/NVDEC/NVENC render nodes
       # - /dev/vchiq:/dev/vchiq # MMAL/OMX on Raspberry Pi
     restart: on-failure
+EOF
+

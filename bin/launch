@@ -4,16 +4,36 @@ else
   PENPOT_MENU="Penpot Start"
 fi
 
-ITEM=$(gum choose "$PENPOT_MENU"  --header "Select service or app:" --height 6 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
+if [ "$(docker container inspect -f '{{.State.Status}}' 'embyserver' )" = "running" ]; then
+  EMBY_MENU="Emby Stop"
+else
+  EMBY_MENU="Emby Start"
+fi
+
+ITEM=$(gum choose "$PENPOT_MENU" "Penpot Open" "$EMBY_MENU" "Emby Open" --header "Select service or app:" --height 6 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
 
 [ ! -n "$ITEM" ] && exit 0
 
 if [ "$ITEM" == "penpot-start" ]; then
+  # Check if penpot is installed before start
   if [ ! -f ~/.penpot/docker-compose.yaml ]; then
-      echo "Penpot docker config no installed"
+      echo "Penpot docker config not installed"
       source ~/.linux/apps/optional/penpot/penpot.sh
   fi
   source ~/.linux/apps/optional/penpot/launch.sh
 elif [ "$ITEM" == "penpot-stop" ]; then
   source ~/.linux/apps/optional/penpot/stop.sh
+elif [ "$ITEM" == "penpot-open" ]; then
+  source ~/.linux/apps/optional/penpot/open.sh
+elif [ "$ITEM" == "emby-start" ]; then
+  # Check if emby is installed before start
+  if [ ! -f ~/.penpot/docker-compose.yaml ]; then
+      echo "Emby docker config not installed"
+      source ~/.linux/apps/optional/emby/emby.sh
+  fi
+  source ~/.linux/apps/optional/emby/launch.sh
+elif [ "$ITEM" == "emby-stop" ]; then
+  source ~/.linux/apps/optional/emby/stop.sh
+elif [ "$ITEM" == "emby-open" ]; then
+  source ~/.linux/apps/optional/emby/open.sh
 fi

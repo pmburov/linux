@@ -1,10 +1,12 @@
-ITEM=$(gum choose "Penpot" "Samba" --header "Select service or app:" --height 6 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
+ITEM=$(gum choose "Penpot" "Emby" "Samba" --header "Select service or app:" --height 6 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
 
 [ ! -n "$ITEM" ] && exit 0
 
 if [ "$ITEM" == "samba" ]; then
   source ~/.linux/configs/samba.sh
-elif [ "$THEME" == "catppuccin" ]; then
+elif [ "$ITEM" == "penpot" ]; then
   source ~/.linux/apps/optional/penpot/penpot.sh
+elif [ "$ITEM" == "emby" ]; then
+  source ~/.linux/apps/optional/emby/emby.sh
 fi
 
