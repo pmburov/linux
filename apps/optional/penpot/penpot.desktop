@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Name=Penpot
+Type=Application
+Exec=sh "~/.linux/apps/optional/penpot/launch.sh"
+Icon=/home/$USER/.local/share/applications/penpot.svg
+Comment=Penpot UI design app
