@@ -10,7 +10,8 @@ gext install wiggle@mechtifs
 gext install weatheroclock@CleoMenezesJr.github.io
 gsettings set org.gnome.GWeather4 temperature-unit centigrade
 gext install quick-settings-tweaks@qwreey
-
+gext install just-perfection-desktop@just-perfection
+# gext install notification-position@drugo.dev
 
 # array=( https://extensions.gnome.org/extension/3960/transparent-top-bar-adjustable-transparency/
 # https://extensions.gnome.org/extension/3193/blur-my-shell/ )
