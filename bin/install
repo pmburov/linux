@@ -1,4 +1,4 @@
-ITEM=$(gum choose "Penpot" "Emby" "Samba" "Input Remapper" "Eiciel" "balenaEtcher" --header "Select service or app:" --height 8 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
+ITEM=$(gum choose "<< Back" "Penpot" "Emby" "Samba" "Input Remapper" "Eiciel" "balenaEtcher" --header "Select service or app:" --height 8 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
 
 [ ! -n "$ITEM" ] && exit 0
 
@@ -16,3 +16,4 @@ elif [ "$ITEM" == "input-remapper" ]; then
   source ~/.linux/apps/optional/input-remapper.sh
 fi
 
+source ~/.linux/bin/menu

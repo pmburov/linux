@@ -10,7 +10,7 @@ else
   EMBY_MENU="Emby Start"
 fi
 
-ITEM=$(gum choose "$PENPOT_MENU" "Penpot Open" "$EMBY_MENU" "Emby Open" --header "Select service or app:" --height 6 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
+ITEM=$(gum choose "<< Back" "$PENPOT_MENU" "Penpot Open" "$EMBY_MENU" "Emby Open" --header "Select service or app:" --height 6 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
 
 [ ! -n "$ITEM" ] && exit 0
 
@@ -37,3 +37,5 @@ elif [ "$ITEM" == "emby-stop" ]; then
 elif [ "$ITEM" == "emby-open" ]; then
   source ~/.linux/apps/optional/emby/open.sh
 fi
+
+source ~/.linux/bin/menu
