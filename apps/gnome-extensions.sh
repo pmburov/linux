@@ -7,6 +7,10 @@ pipx install gnome-extensions-cli --system-site-packages
 gext install blur-my-shell@aunetx
 gext install custom-hot-corners-extended@G-dH.github.com
 gext install wiggle@mechtifs
+gext install weatheroclock@CleoMenezesJr.github.io
+gsettings set org.gnome.GWeather4 temperature-unit centigrade
+gext install quick-settings-tweaks@qwreey
+
 
 # array=( https://extensions.gnome.org/extension/3960/transparent-top-bar-adjustable-transparency/
 # https://extensions.gnome.org/extension/3193/blur-my-shell/ )
