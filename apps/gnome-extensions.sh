@@ -3,6 +3,7 @@ sudo apt install -y gnome-shell-extensions
 
 sudo apt install -y gnome-shell-extension-manager pipx
 pipx install gnome-extensions-cli --system-site-packages
+pipx ensurepath
 
 gext install blur-my-shell@aunetx
 gext install custom-hot-corners-extended@G-dH.github.com
