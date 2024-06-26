@@ -1,4 +1,4 @@
-ITEM=$(gum choose "<< Back" "Penpot" "Emby" "Samba" "Input Remapper" "Eiciel" "balenaEtcher" "Flacon" "Flac Tools" "Tenacity" --header "Select service or app:" --height 12 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
+ITEM=$(gum choose "<< Back" "Penpot" "Krita" "Emby" "Samba" "Input Remapper" "Eiciel" "balenaEtcher" "Flacon" "Flac Tools" "Tenacity" --header "Select service or app:" --height 13 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
 
 [ ! -n "$ITEM" ] && exit 0
 
@@ -20,6 +20,8 @@ elif [ "$ITEM" == "flac-tools" ]; then
   source ~/.linux/apps/optional/flac-tools.sh
 elif [ "$ITEM" == "tenacity" ]; then
   source ~/.linux/apps/optional/tenacity.sh
+elif [ "$ITEM" == "krita" ]; then
+  source ~/.linux/apps/optional/krita.sh
 fi
 
 source ~/.linux/bin/menu
