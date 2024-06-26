@@ -5,3 +5,6 @@ flatpak install -y flathub org.onlyoffice.desktopeditors
 # sudo apt install -y ./onlyoffice-desktopeditors_amd64.deb
 # rm onlyoffice-desktopeditors_amd64.deb
 # cd -
+
+# Native title bar in Gnome
+# flatpak run org.onlyoffice.desktopeditors --system-title-bar
