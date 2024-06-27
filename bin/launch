@@ -10,7 +10,13 @@ else
   EMBY_MENU="Emby Start"
 fi
 
-ITEM=$(gum choose "<< Back" "$PENPOT_MENU" "Penpot Open" "$EMBY_MENU" "Emby Open" --header "Select service or app:" --height 6 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
+if [ "$(docker container inspect -f '{{.State.Status}}' 'homeassistant' )" = "running" ]; then
+  HOMA_MENU="Home Assistant Stop"
+else
+  HOMA_MENU="Home Assistant Start"
+fi
+
+ITEM=$(gum choose "<< Back" "$PENPOT_MENU" "Penpot Open" "$EMBY_MENU" "Emby Open" "$HOMA_MENU" "Home Assistant Open" --header "Select service or app:" --height 9 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
 
 [ ! -n "$ITEM" ] && exit 0
 
@@ -36,6 +42,17 @@ elif [ "$ITEM" == "emby-stop" ]; then
   source ~/.linux/apps/optional/emby/stop.sh
 elif [ "$ITEM" == "emby-open" ]; then
   source ~/.linux/apps/optional/emby/open.sh
+elif [ "$ITEM" == "home-assistant-start" ]; then
+  # Check if emby is installed before start
+  if [ ! -f ~/.config/home-assistant/docker-compose.yaml ]; then
+      echo "Emby docker config not installed"
+      source ~/.linux/apps/optional/home-assistant/home-assistant.yaml.sh
+  fi
+  source ~/.linux/apps/optional/home-assistant/launch.sh
+elif [ "$ITEM" == "home-assistant-stop" ]; then
+  source ~/.linux/apps/optional/home-assistant/stop.sh
+elif [ "$ITEM" == "home-assistant-open" ]; then
+  source ~/.linux/apps/optional/home-assistant/open.sh
 fi
 
 source ~/.linux/bin/menu
