@@ -22,3 +22,5 @@ dconf write /org/gnome/shell/extensions/tactile/gap-size 4
 dconf write /org/gnome/shell/extensions/tactile/layout-2-row-2 0
 dconf write /org/gnome/shell/extensions/tactile/layout-2-col-1 2
 dconf write /org/gnome/shell/extensions/tactile/layout-2-col-2 2
+
+# gsettings set org.gnome.mutter center-new-windows true
