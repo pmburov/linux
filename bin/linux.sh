@@ -2,5 +2,5 @@
 
 source ~/.linux/bin/ascii.sh
 echo ''
-source ~/.linux/bin/menu
+source ~/.linux/bin/menu.sh
 

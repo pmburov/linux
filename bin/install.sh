@@ -26,4 +26,4 @@ elif [ "$ITEM" == "solaar" ]; then
   source ~/.linux/apps/optional/logi-solaar.sh
 fi
 
-source ~/.linux/bin/menu
+source ~/.linux/bin/menu.sh

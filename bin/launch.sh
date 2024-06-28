@@ -55,4 +55,4 @@ elif [ "$ITEM" == "home-assistant-open" ]; then
   source ~/.linux/apps/optional/home-assistant/open.sh
 fi
 
-source ~/.linux/bin/menu
+source ~/.linux/bin/menu.sh

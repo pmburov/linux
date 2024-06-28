@@ -40,4 +40,4 @@ case $choice in
     ;;
 esac
 
-source ~/.linux/bin/menu
+source ~/.linux/bin/menu.sh
