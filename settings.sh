@@ -1,7 +1,7 @@
 # keyboard behaviour
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape', 'ctrl:swap_lalt_lctl']"
 
-gsettings set org.gnome.desktop.wm.keybindings close "['<Control>q']"
+gsettings set org.gnome.desktop.wm.keybindings close "['<Shift><Control>q']"
 gsettings set org.gnome.desktop.wm.keybindings switch-group "['<Control>grave']"
 gsettings set org.gnome.desktop.wm.keybindings switch-group-backward "['<Shift><Control>grave']"
 
