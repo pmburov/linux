@@ -1,5 +1,5 @@
 # keyboard behaviour
-gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:swap_lalt_lctl', 'caps:escape', 'altwin:swap_alt_win']"
+gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape', 'altwin:ctrl_alt_win']"
 
 gsettings set org.gnome.desktop.wm.keybindings close "['<Shift><Control>q']"
 gsettings set org.gnome.desktop.wm.keybindings switch-group "['<Control>grave']"
