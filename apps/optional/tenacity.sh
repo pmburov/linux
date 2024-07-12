@@ -1,2 +1,2 @@
 # --- Tenacity ---
-flatpak install flathub org.tenacityaudio.Tenacity
+flatpak install -y flathub org.tenacityaudio.Tenacity
