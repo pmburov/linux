@@ -4,6 +4,11 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape', 'altw
 gsettings set org.gnome.desktop.wm.keybindings close "['<Shift><Control>q']"
 gsettings set org.gnome.desktop.wm.keybindings switch-group "['<Control>grave']"
 gsettings set org.gnome.desktop.wm.keybindings switch-group-backward "['<Shift><Control>grave']"
+# gsettings set org.gnome.desktop.wm.keybindings toggle-application-view "['F4']"
+dconf write /org/gnome/shell/keybindings/toggle-application-view "['F4']"
+dconf write /org/gnome/desktop/wm/keybindings/move-to-monitor-down "@as []"
+dconf write /org/gnome/desktop/wm/keybindings/minimize "@as []"
+
 
 gsettings set org.gnome.desktop.peripherals.mouse natural-scroll true
 
