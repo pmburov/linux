@@ -1,15 +1,14 @@
 # Install samba
 sudo apt update
-sudo apt install samba
+sudo apt install -y samba
 # share direcory
 mkdir ~/Share
 # config
-sudo echo '[sambashare]
+echo "[sambashare]
     comment = Samba on Ubuntu
-    path = ~/Share
+    path = /home/${USER}/Share
     read only = no
-    browsable = yes' >> /etc/samba/smb.conf
-
+    browsable = yes" | sudo tee -a /etc/samba/smb.conf
 # restart service
 sudo service smbd restart
 # add samba to firewall
