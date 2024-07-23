@@ -24,3 +24,6 @@ dconf write /org/gnome/shell/extensions/tactile/layout-2-col-1 2
 dconf write /org/gnome/shell/extensions/tactile/layout-2-col-2 2
 
 gsettings set org.gnome.mutter center-new-windows true
+
+# don't put display to sleep
+dconf write /org/gnome/desktop/session/idle-delay "uint32 0"
