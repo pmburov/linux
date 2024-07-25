@@ -32,3 +32,16 @@ gsettings set org.gnome.mutter center-new-windows true
 
 # don't put display to sleep
 dconf write /org/gnome/desktop/session/idle-delay "uint32 0"
+
+dconf load /org/gnome/terminal/legacy/profiles:/ < ~/.linux/configs/gnome-terminal.dconf
+
+# Theme and stuff
+
+dconf write /org/gnome/desktop/interface/color-scheme "'prefer-dark'"
+dconf write /org/gnome/desktop/interface/gtk-theme "'Yaru-dark'"
+dconf write /org/gnome/shell/extensions/dash-to-dock/show-mounts-network false
+dconf write /org/gnome/shell/extensions/dash-to-dock/show-mounts-only-mounted true
+dconf write /org/gnome/shell/extensions/ding/show-home false
+dconf write /org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size 38
+
+dconf write /org/gnome/desktop/peripherals/touchpad/click-method "'fingers'"
