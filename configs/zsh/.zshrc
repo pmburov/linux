@@ -102,3 +102,10 @@ source $ZSH/oh-my-zsh.sh
 alias linux="~/.linux/bin/linux.sh"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+export PATH="$PATH:/home/pavel/.local/bin"
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh)"
+fi
+
+source <(fzf --zsh)
