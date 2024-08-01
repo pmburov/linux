@@ -12,7 +12,7 @@ mkdir winewow64-build/ wine-install/
 cd winewow64-build/
 ../configure --prefix="$HOME/Documents/ElementalWarrior-wine/wine-install" --enable-archs=i386,x86_64
 echo 'Grab some tea and snaks, it will take a good while 🫖☕☕☕'
-make --jobs 4
+# make --jobs 4
 make install
 # Set up Wine for Affinity
 sudo mkdir /opt/wines
