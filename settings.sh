@@ -45,3 +45,7 @@ dconf write /org/gnome/shell/extensions/ding/show-home false
 dconf write /org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size 38
 
 dconf write /org/gnome/desktop/peripherals/touchpad/click-method "'fingers'"
+
+dconf write /org/gnome/shell/extensions/rounded-window-corners-reborn/border-width 1
+dconf write /org/gnome/shell/extensions/rounded-window-corners-reborn/border-color "(1.0, 1.0, 1.0, 0.20)"
+

@@ -7,7 +7,8 @@ https://extensions.gnome.org/extension/4167/custom-hot-corners-extended/
 https://extensions.gnome.org/extension/3843/just-perfection/
 https://extensions.gnome.org/extension/771/proxy-switcher/
 https://extensions.gnome.org/extension/4548/tactile/
-https://extensions.gnome.org/extension/6784/wiggle/ )
+https://extensions.gnome.org/extension/6784/wiggle/
+https://extensions.gnome.org/extension/7048/rounded-window-corners-reborn/ )
 
 for i in "${array[@]}"
 do
