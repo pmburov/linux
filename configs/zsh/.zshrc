@@ -147,3 +147,15 @@ setopt hist_find_no_dups
 bindkey '^f' autosuggest-accept
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
+
+# Completion styling
+# Makes autocompletion case insensitive
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+# Disable built-in menu in favor of fzf
+zstyle ':completion:*' menu no
+# Preview folder contents when autocomplete cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+
+# Aliases
+alias ls='ls --color'
