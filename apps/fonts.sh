@@ -1,3 +1,5 @@
+sudo apt install -y font-manager
+
 mkdir -p ~/.local/share/fonts
 
 cd /tmp
