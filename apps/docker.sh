@@ -13,4 +13,10 @@ echo \
 sudo apt-get update
 # Install the latest version
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+sudo groupadd docker
 sudo usermod -aG docker $USER
+newgrp docker
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+docker context use default
