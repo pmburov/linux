@@ -1,22 +1,22 @@
-if [ "$(docker container inspect -f '{{.State.Status}}' 'penpot-penpot-frontend-1' )" = "running" ]; then
-  PENPOT_MENU="Penpot Stop"
-else
-  PENPOT_MENU="Penpot Start"
-fi
+# if [ "$(docker container inspect -f '{{.State.Status}}' 'penpot-penpot-frontend-1' )" = "running" ]; then
+#   PENPOT_MENU="Penpot Stop"
+# else
+#   PENPOT_MENU="Penpot Start"
+# fi
 
-if [ "$(docker container inspect -f '{{.State.Status}}' 'embyserver' )" = "running" ]; then
-  EMBY_MENU="Emby Stop"
-else
-  EMBY_MENU="Emby Start"
-fi
+# if [ "$(docker container inspect -f '{{.State.Status}}' 'embyserver' )" = "running" ]; then
+#   EMBY_MENU="Emby Stop"
+# else
+#   EMBY_MENU="Emby Start"
+# fi
 
-if [ "$(docker container inspect -f '{{.State.Status}}' 'homeassistant' )" = "running" ]; then
-  HOMA_MENU="Home Assistant Stop"
-else
-  HOMA_MENU="Home Assistant Start"
-fi
+# if [ "$(docker container inspect -f '{{.State.Status}}' 'homeassistant' )" = "running" ]; then
+#   HOMA_MENU="Home Assistant Stop"
+# else
+#   HOMA_MENU="Home Assistant Start"
+# fi
 
-ITEM=$(gum choose "<< Back" "$PENPOT_MENU" "Penpot Open" "$EMBY_MENU" "Emby Open" "$HOMA_MENU" "Home Assistant Open" --header "Select service or app:" --height 9 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
+ITEM=$(gum choose "<< Back" "Penpot Start" "Penpot Stop" "Penpot Open" "Emby Start" "Emby Stop" "Emby Open" "Home Assistant Start" "Home Assistant Stop" "Home Assistant Open" --header "Select service or app:" --height 9 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
 
 [ ! -n "$ITEM" ] && exit 0
 
