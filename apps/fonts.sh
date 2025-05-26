@@ -23,5 +23,10 @@ unzip ibm-plex-mono.zip -d ibm-plex-mono
 cp ibm-plex-mono/ibm-plex-mono/fonts/complete/ttf/*.ttf ~/.local/share/fonts
 rm -rf ibm-plex-mono.zip ibm-plex-mono
 
+wget https://github.com/rsms/inter/releases/download/v4.1/Inter-4.1.zip
+unzip Inter-4.1.zip -d Inter-4.1
+cp Inter-4.1/extras/ttf//*.ttf ~/.local/share/fonts
+rm -rf Inter-4.1.zip Inter-4.1
+
 fc-cache
 cd -
